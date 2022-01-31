@@ -55,7 +55,11 @@ contract HodlBank {
         return block.timestamp;
     }
 
-    function getTransactions() public view returns (SingleHodl[] memory) {
-        return HodlRecords[msg.sender];
+    function getTransactions(address account)
+        public
+        view
+        returns (SingleHodl[] memory)
+    {
+        return HodlRecords[account];
     }
 }
